@@ -7,5 +7,6 @@ import './index.css';
 import App from './App';
 import appStore from './store/initStore';
 
+// This is a test
 ReactDOM.render(<Provider store={appStore}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
