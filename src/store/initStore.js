@@ -7,7 +7,8 @@ import localStorageMiddleware from './middleware/localStorageMiddleware';
 
 const defaultState = {
   tasks: (localStorage.getItem(LOCAL_STORAGE_TASKS_KEY)) ? JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS_KEY)) : {},
-  editTaskKey: ''
+  editTaskKey: '',
+  newTaskKey: ''
 }
 
 const appStore = createStore(reducer, defaultState, applyMiddleware(thunk, localStorageMiddleware));

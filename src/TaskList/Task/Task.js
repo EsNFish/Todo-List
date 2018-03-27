@@ -1,8 +1,10 @@
 import React from 'react';
 import moment from 'moment';
+import {connect} from 'react-redux';
+import './Task.css';
 
 const task = (props) => (
-  <tr id={props.task.key} onClick={() => props.editTask(props.task.key)} >
+  <tr className={props.newTaskKey === props.task.key ? "newTask" : null} id={props.task.key} onClick={() => props.editTask(props.task.key)} >
     <td>{props.task.priority}</td>
     <td>{props.task.todo}</td>
     <td>{moment(props.task.dateEntered).format("Do MMM YYYY")}</td>
@@ -11,4 +13,9 @@ const task = (props) => (
   </tr>
 );
 
-export default task;
+const mapStateToProps = state => {
+  return {
+    newTaskKey: state.newTaskKey,
+  }
+}
+export default connect(mapStateToProps)(task);

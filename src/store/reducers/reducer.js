@@ -41,6 +41,12 @@ const reducer = (state, action) => {
       }
     }
 
+    case actionTypes.NEW_TASK: {
+      return {
+        ...state,
+        newTaskKey: action.key
+      }
+    }
     default: return state;
   }
 }

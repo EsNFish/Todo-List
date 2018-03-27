@@ -30,3 +30,10 @@ export const selectEdit = (key) => {
     key
   }
 }
+
+export const newTask = (key) => {
+  return {
+    type: actionTypes.NEW_TASK,
+    key
+  }
+}

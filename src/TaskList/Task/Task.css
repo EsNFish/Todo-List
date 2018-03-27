@@ -1,0 +1,11 @@
+@keyframes newTaskAnimation {
+    from {background-color: rgb(16, 204, 16);}
+    to {background-color: white;}
+}
+
+.newTask {
+    background-color: white;
+    animation-name: newTaskAnimation;
+    animation-duration: 2s;
+}
+
