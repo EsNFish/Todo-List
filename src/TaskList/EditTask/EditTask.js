@@ -71,13 +71,13 @@ class EditTask extends Component {
             disabled={false}
             onChange={(event) => this.onChangeHandler("todo", event.target.value)} />
         </td>
-        <td>{moment(this.state.task.dateEntered).format("Do MMM YYYY")}</td>
+        <td>{this.state.task.dateEntered === '' ? '' : moment(this.state.task.dateEntered).format("Do MMM YYYY")}</td>
         <td>
           <DateTime
             dateFormat="Do MMM YYYY"
             timeFormat={false}
             onChange={(event) => this.onChangeHandler("dateDue", event._d)}
-            value={moment(this.state.task.dateDue).format("Do MMM YYYY")}
+            value={this.state.task.dateDue === '' ? '' : moment(this.state.task.dateDue).format("Do MMM YYYY")}
           />
         </td>
         <td>
