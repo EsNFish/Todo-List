@@ -28,10 +28,18 @@ class EditTask extends Component {
   }
 
   submitTask = () => {
-    if (this.state.task.todo !== '') {
+    if (this.allFieldsContainInput()) {
       this.props.onAddTask({ ...this.state.task });
       this.resetInput();
     }
+  }
+
+  allFieldsContainInput = () => {
+    const task = this.state.task;
+    if (task.todo !== '' && task.dateDue !== '' && task.priority !== '' && task.status !== '') {
+      return true;
+    }
+    return false;
   }
 
   render() {
