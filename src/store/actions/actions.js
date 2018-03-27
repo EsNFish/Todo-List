@@ -1,5 +1,4 @@
 import * as actionTypes from '../actions/actionTypes';
-import moment from 'moment';
 
 export const submitTask = (newTask) => {
   return {

@@ -66,7 +66,7 @@ class EditTask extends Component {
             value={this.state.task.priority}
             onChange={(event) => this.onChangeHandler("priority", event.target.value)}
             bsClass="form-control form-control-display">
-            <option disabled selected value=""></option>
+            <option disabled value=""></option>
             <option value="1" >1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -95,7 +95,7 @@ class EditTask extends Component {
             value={this.state.task.status}
             onChange={(event) => this.onChangeHandler("status", event.target.value)}
             bsClass="form-control form-control-display">
-            <option disabled selected value=""></option>
+            <option disabled value=""></option>
             <option value="Pending">Pending</option>
             <option value="In Progress">In Progress</option>
             <option value="Complete">Complete</option>
