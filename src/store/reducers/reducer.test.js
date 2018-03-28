@@ -162,7 +162,7 @@ describe('reducer', () => {
     });
   });
 
-  it('SELECT_TASK: sets the key for the task to be edited', () => {
+  it('SELECT_EDIT: sets the key for the task to be edited', () => {
     const action = {
       type: actionTypes.SELECT_EDIT,
       key: '34'
@@ -172,6 +172,19 @@ describe('reducer', () => {
     };
     expect(reducer(state, action)).toEqual({
       editTaskKey: '34'
+    })
+  });
+
+  it('ANIMATE_NEW_TASK: sets the key for a task to be animated', () => {
+    const action = {
+      type: actionTypes.ANIMATE_NEW_TASK,
+      key: '1234'
+    };
+    const state = {
+      animateTaskKey: ''
+    };
+    expect(reducer(state, action)).toEqual({
+      animateTaskKey: '1234'
     })
   });
 });
