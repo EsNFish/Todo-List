@@ -3,7 +3,7 @@ import moment from 'moment';
 import {connect} from 'react-redux';
 import './Task.css';
 
-const task = (props) => (
+export const Task = (props) => (
   <tr className={props.newTaskKey === props.task.key ? "newTask" : null} id={props.task.key} onClick={() => props.editTask(props.task.key)} >
     <td>{props.task.priority}</td>
     <td>{props.task.todo}</td>
@@ -18,4 +18,4 @@ const mapStateToProps = state => {
     newTaskKey: state.newTaskKey,
   }
 }
-export default connect(mapStateToProps)(task);
+export default connect(mapStateToProps)(Task);

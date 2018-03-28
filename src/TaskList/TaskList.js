@@ -11,7 +11,7 @@ import './TaskList.css';
 import * as actions from '../store/actions/actions';
 import { NEW_TASK } from '../appConstants';
 
-class TaskList extends Component {
+export class TaskList extends Component {
 
   state = {
     sortMode: "Blank",
