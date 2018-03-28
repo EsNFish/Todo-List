@@ -10,7 +10,7 @@ import { NEW_TASK } from '../../appConstants';
 import * as actions from '../../store/actions/actions';
 import Aux from '../../Auxiliary/Aux1';
 
-class EditTask extends Component {
+export class EditTask extends Component {
 
   state = {
     task: { ...this.props.task },
