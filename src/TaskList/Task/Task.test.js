@@ -2,8 +2,8 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 // import {renderComponent, expect} from './test_helper';
 import {shallow, mount} from 'enzyme';
-import {Task} from './TaskList/Task/Task';
-import {TaskList} from './TaskList/TaskList';
+import {Task} from './Task';
+// import {TaskList} from './TaskList/TaskList';
 import React from 'react';
 import {expect} from 'chai';
 
