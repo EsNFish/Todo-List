@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 
-const reducer = (state, action) => {
+const reducer = (state = {}, action) => {
 
   switch (action.type) {
 
@@ -41,10 +41,10 @@ const reducer = (state, action) => {
       }
     }
 
-    case actionTypes.NEW_TASK: {
+    case actionTypes.ANIMATE_NEW_TASK: {
       return {
         ...state,
-        newTaskKey: action.key
+        animateTaskKey: action.key
       }
     }
     default: return state;

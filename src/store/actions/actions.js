@@ -30,9 +30,9 @@ export const selectEdit = (key) => {
   }
 }
 
-export const newTask = (key) => {
+export const animateNewTask = (key) => {
   return {
-    type: actionTypes.NEW_TASK,
+    type: actionTypes.ANIMATE_NEW_TASK,
     key
   }
 }
